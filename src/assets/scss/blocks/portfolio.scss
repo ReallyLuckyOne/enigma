@@ -1,0 +1,86 @@
+
+.portfolio__content {
+    text-align: left;
+    margin: 2rem 3.2rem;
+    
+    @include breakMax ($mode-1200) {
+        text-align: center;
+    }
+}
+.portfolio__item {
+    padding-bottom: 2rem;
+    margin: 1rem .8rem;
+    background-color: #efefef;
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+
+}
+.portfolio__title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    
+    text-transform: uppercase;
+    color: #5f5b5b;
+    margin-bottom: .8rem;
+}
+.portfolio__text {
+    font-size: 1.6rem;
+    font-weight: 400;
+    
+    color: #8f8f8f;
+    line-height: 1.3em;
+}
+
+
+.portfolio__nav {
+    margin-bottom: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+
+    &--link {
+        font-size: 1.8rem;
+        font-weight: 600;
+        
+        display: block;
+        
+        color: #5f5b5b;
+        line-height: 1.1em;
+        text-transform: uppercase;
+        text-decoration: none;
+        
+        position: relative;
+        margin-bottom: 2rem;
+        
+        transition: color .2s linear;
+        margin-left: 3rem;
+        
+        &:first-child {
+            margin-left: 0;
+        }
+        &:hover {
+            color: #87b672;
+        }
+        &:not(:last-child):after {
+            display: block;
+            content: "";
+            height: .2rem;
+            width: 1.6rem;
+            
+            background-color: #5f5b5b;
+            position: absolute;
+            top: 45%;
+            right: 0;
+            transform: translate3d(-45%, 0, 0);
+            transform: rotate(-60deg);
+            margin: 0 -2rem;
+            cursor: default;
+            
+        } 
+        
+        @include breakMax ($mode-330) {
+            margin-left: 2rem;
+        }
+    }
+}

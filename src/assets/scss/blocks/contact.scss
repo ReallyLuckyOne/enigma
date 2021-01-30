@@ -1,0 +1,25 @@
+.contact {
+    width: 61%;
+    @include breakMax ($mode-850) {
+        width: 100%;
+    }
+}
+
+.contact__title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    
+    text-transform: uppercase;
+    color: #5f5b5b;
+    line-height: 1.1em;
+    
+    margin-bottom: 2rem;
+}
+.contact__text {
+    font-size: 1.6rem;
+    font-weight: 400;
+    
+    line-height: 1.5em;
+    color: #8f8f8f;
+    margin-bottom: 2rem;
+}

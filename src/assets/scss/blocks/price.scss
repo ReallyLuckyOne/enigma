@@ -1,0 +1,114 @@
+.price {
+    background-color: #efefef;
+}
+
+
+.price__content {
+    margin: 0 -.2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    
+    @include breakMax ($mode-700){
+        margin-top: 2.5rem;
+        padding-bottom: 2.5rem;
+    }
+}
+
+.price__item {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 24.333333%;
+    min-width: 27rem;
+    padding: 0 .2rem;
+    margin-bottom: 2rem;
+        
+//    @include breakMax ($mode-991) {
+//        width: 33%;
+//    }
+}
+
+.price__name {
+    padding: 1.8rem 0;
+    text-transform: uppercase;
+    
+    font-size: 2.2rem;
+    font-weight: 600;
+    
+    line-height: 1.1em;
+    color: $white;
+    background-color: $bg-price;
+    
+}
+
+.price__price {
+    font-size: 4.2rem;
+    font-weight: 600;
+    
+    line-height: .57em;
+    padding: 2rem 0;
+    color: $price-num;
+    position: relative;
+    
+    span {
+        color: inherit;
+        font-size: 2.4rem;
+        font-weight: 600;
+        
+        line-height: 1em;
+        position:absolute;
+        top: 1.3rem;
+    }
+}
+.price__price,
+.price__perk {
+
+    background-color: #fff;
+}
+
+.price__property {
+    font-size: 1.6rem;
+    font-weight: 400;
+    
+    line-height: 1.5em;
+    color: $price-perk;
+    
+    border-top: 1px solid #c2c2c2;
+    width: 85%;
+    margin: 0 auto;
+    
+    padding: 1rem 0;
+}
+
+.price__btn {
+    padding: 1.2rem 3rem;
+    color: $white;
+    background-color: #a5c895;
+    
+    text-decoration: none;
+    text-transform: uppercase;
+    
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: 1.3em;
+    display: block;
+    transition: background-color .2s linear;
+        
+    &:hover {
+        background-color: #254119;
+    }
+    
+}
+.price__button {
+    background-color: #87b672;
+    height: 6.7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+

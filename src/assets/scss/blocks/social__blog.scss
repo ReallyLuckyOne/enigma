@@ -1,0 +1,95 @@
+.social__stat {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 3rem 0 4.5rem;
+    
+    ul {
+        display: flex;
+        margin-left: 2rem;
+        
+        &:first-child {
+            margin-left: 0;
+        }
+    }
+    
+    &--item {
+        margin-left: 1.5rem;
+        margin-bottom: 1rem;
+        
+        &:first-child {
+            margin-left: 0;
+        }
+    }
+    &--twitter {
+        background-color: #00bbf5;
+        
+        width: 7.5rem;
+        padding: .6rem .5rem;
+
+        transition: background-color .2s linear;
+         
+        &:hover {
+            background-color: darken(#00bbf5, 15%);
+        }
+    }
+    &--num {
+        border: .1rem solid #9b9999;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        margin-left: .8rem;
+        padding: .65rem 1rem;
+
+        font-size: 1.4rem;
+        font-weight: 500;
+
+        color: #9b9999;
+        
+                
+        @include breakMax ($mode-575){
+            display: none;
+        }
+
+    }
+    &--facebook {
+        background-color: #4265b0;
+        
+        width: 6rem;
+        padding: .6rem .5rem; 
+        transition: background-color .2s linear;
+         
+        &:hover {
+            background-color: darken(#4265b0, 15%);
+        }
+    }
+    
+       
+    &--link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+
+    }
+
+    &--text {
+        font-size: 1.4rem;
+        font-weight: 500;
+        padding-left: .8rem;
+        color: $white;
+    }
+
+    &--icon {
+        display: block;
+        height: 1.7rem;
+        width: 1.7rem;
+        fill: #fff;
+    }
+    
+    @include breakMax ($mode-575) {
+        margin-bottom: 1.5rem;
+    }
+
+}

@@ -1,0 +1,264 @@
+.footer {
+    background-color: #333;
+}
+
+.footer__content {
+    padding-top: 5.5rem;
+    padding-bottom: 2.5rem;
+    
+    @include breakMax ($mode-700) {
+        padding-top: 1rem;
+    }
+}
+
+.footer__above {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+    @include breakMax ($mode-991) {
+        justify-content: space-around;
+    }
+    @include breakMax ($mode-575) {
+        justify-content: space-between;
+    }
+}
+
+.footer__item {
+    margin-bottom: 2rem;
+    
+    &--first {
+        width: 39%;
+        
+        @include breakMax ($mode-991) {
+            width: 100%;
+        }
+    }
+    
+    &--second {
+        width: 17%;
+        @include breakMax ($mode-575) {
+            min-width: 15rem;
+        }
+    }
+    
+    &--third {
+        width: 14%;
+        @include breakMax ($mode-575) {
+            min-width: 13rem;
+        }
+    }
+    
+    &--fourth {
+        width: 19%;
+    }
+    
+    &--second,
+    &--third,
+    &--fourth {
+        @include breakMax ($mode-991) {
+            width: 30%;
+        }
+    }
+    &--fourth {
+        @include breakMax ($mode-700) {
+            width: 100%;
+            
+        }
+    }
+    @include breakMax ($mode-700) {
+        margin-bottom: 1.5rem;
+    }
+}
+.footer__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    
+    @include breakMax ($mode-700) {
+        margin-bottom: 1rem;
+    }
+}
+
+.footer__logo {
+    font-size: 4.2rem;
+    font-weight: 400;
+    font-family: pacifico;
+    
+    line-height: 1.7em;
+    
+    color: $white;
+}
+.footer__text {
+    font-size: 1.4rem;
+    font-weight: 400;
+    
+    line-height: 1.7em;
+    color: #9b9999;
+    
+    &--letter {
+        margin-bottom: 1.5rem;
+    }
+}
+
+.footer__title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    
+    color: #fefefe;
+    text-transform: uppercase;
+    line-height: 1.3em;
+    
+    margin-bottom: 1.5rem;
+    
+    @include breakMax ($mode-575) {
+        margin-bottom: .7rem;
+    }
+}
+
+.footer__info {
+    font-size: 1.4rem;
+    font-weight: 400;
+    
+    color: #9b9999;
+    line-height: 1.7em;
+    
+    &--margin {
+        margin-top: 1rem;
+        
+        a {
+            text-decoration: none;
+            font-size: 1.4rem;
+            font-weight: 400;
+    
+            color: #9b9999;
+            transition: color .2s linear;
+            
+            &:hover {
+                text-decoration: underline;
+                color: lighten(#9b9999, 30%);
+            }
+        }
+    }
+}
+
+.footer__arrow {
+    border: solid #fefefe;
+    border-width: 0 .3rem .3rem 0;
+    display: inline-block;
+    padding: .3rem;
+    
+    &--right {
+        transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
+    }
+}
+
+.footer__link {
+    display: flex;
+    align-items: center;
+    
+}
+
+.footer__quick {
+    padding-left: 1rem;
+    
+    a {
+        text-decoration: none;
+        color: #9b9999;
+        
+        font-size: 1.4rem;
+        font-weight: 400;
+        
+        line-height: 1.7em;
+        letter-spacing: .05rem;
+        
+        transition: color .2s linear;
+        
+        &:hover {
+            text-decoration: underline;
+            color: lighten(#9b9999, 30%);
+        }
+    }
+}
+
+.footer__under:before {
+    display: block;
+    content: "";
+    width: 100%;
+    height: .2rem;
+    
+    background-color: #808080;
+    margin: 3rem 0 2.5rem;
+    
+    @include breakMax ($mode-700) {
+        margin: 1.5rem 0;
+    }
+}
+
+.footer__inside {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    @include breakMax ($mode-700) {
+        display: block;
+        text-align: center;
+    }
+}
+
+.footer__additional {
+    display: flex;
+    
+    @include breakMax ($mode-700) {
+        justify-content: center;
+    }
+}
+
+.footer__addons {
+    text-decoration: none;
+    text-transform: uppercase;
+    
+    font-size: 1.2rem;
+    font-weight: 600;
+    
+    color: #808080;
+    line-height: 1.5em;
+    
+    margin-left: 1rem;
+    
+    transition: color .2s linear;
+    
+    &:hover {
+        text-decoration: underline;
+        color: lighten(#808080, 30%);
+    }
+}
+
+.footer__copyright {
+    text-transform: uppercase;
+    
+    font-size: 1.2rem;
+    font-weight: 600;
+    
+    color: #808080;
+    line-height: 1.5em;
+    
+    & b {
+        color: #cbcbcb;
+    }
+    
+    @include breakMax ($mode-575) {
+        font-size: 1.1rem;
+    }
+}
+
+
+
+
+
+
+
+
+

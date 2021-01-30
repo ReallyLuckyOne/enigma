@@ -1,0 +1,54 @@
+@import "vars";
+@import "mixins";
+@import "external/reset";
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    box-sizing: border-box;
+    background-color: #fefefe;
+    font-size: 2rem;
+    color: black;
+}
+
+@import "blocks/container";
+@import "blocks/header";
+@import "blocks/page";
+@import "blocks/intro";
+@import "blocks/info";
+@import "blocks/team";
+@import "blocks/social";
+@import "blocks/social__blog";
+@import "blocks/service";
+@import "blocks/price";
+@import "blocks/post";
+@import "blocks/embed";
+@import "blocks/pagenav";
+@import "blocks/sidebar_post";
+@import "blocks/footer";
+@import "blocks/subscribe";
+@import "blocks/archive";
+@import "blocks/sidebar__archive";
+@import "blocks/sidebar__contact";
+@import "blocks/contact";
+@import "blocks/form";
+@import "blocks/comment";
+@import "blocks/home";
+@import "blocks/works";
+@import "blocks/portfolio";
+@import "blocks/search_modal";
+@import "blocks/post__slider";
+@import "blocks/home__slider";
+@import "blocks/burger";
+@import "blocks/helpers";
+
+
+
+
+
+
+
+
+

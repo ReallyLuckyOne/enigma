@@ -1,0 +1,18 @@
+.page {
+    background-image: url(/assets/images/page-title-back.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.page__info {
+    font-size: 3.6rem;
+    font-weight: 600;
+    line-height: 2em;
+    
+    text-transform: uppercase;
+    color: $page-title;
+    
+    @include breakMax ($mode-575) {
+            font-size: 3rem;
+    }
+}

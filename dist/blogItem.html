@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="assets/css/style.min.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <!-- Useful meta tags -->
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="robots" content="index, follow">
+    <meta name="google" content="notranslate">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="">
+    <script src="https://kit.fontawesome.com/8546db1d85.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+    <title>Blog Item</title>
+</head>
+<body>
+    <svg style="display: none">
+        <symbol id="facebook" viewBox="0 0 24 24">
+            <g>
+                <path d="m15.997 3.985h2.191v-3.816c-.378-.052-1.678-.169-3.192-.169-3.159 0-5.323 1.987-5.323 5.639v3.361h-3.486v4.266h3.486v10.734h4.274v-10.733h3.345l.531-4.266h-3.877v-2.939c.001-1.233.333-2.077 2.051-2.077z" />
+            </g>
+        </symbol>
+        <symbol id="twitter" viewBox="0 0 512 512">
+            <g>
+                <g>
+                    <path d="M512,97.248c-19.04,8.352-39.328,13.888-60.48,16.576c21.76-12.992,38.368-33.408,46.176-58.016
+    			c-20.288,12.096-42.688,20.64-66.56,25.408C411.872,60.704,384.416,48,354.464,48c-58.112,0-104.896,47.168-104.896,104.992
+    			c0,8.32,0.704,16.32,2.432,23.936c-87.264-4.256-164.48-46.08-216.352-109.792c-9.056,15.712-14.368,33.696-14.368,53.056
+    			c0,36.352,18.72,68.576,46.624,87.232c-16.864-0.32-33.408-5.216-47.424-12.928c0,0.32,0,0.736,0,1.152
+    			c0,51.008,36.384,93.376,84.096,103.136c-8.544,2.336-17.856,3.456-27.52,3.456c-6.72,0-13.504-0.384-19.872-1.792
+    			c13.6,41.568,52.192,72.128,98.08,73.12c-35.712,27.936-81.056,44.768-130.144,44.768c-8.608,0-16.864-0.384-25.12-1.44
+    			C46.496,446.88,101.6,464,161.024,464c193.152,0,298.752-160,298.752-298.688c0-4.64-0.16-9.12-0.384-13.568
+    			C480.224,136.96,497.728,118.496,512,97.248z" />
+                </g>
+            </g>
+        </symbol>
+        
+        <symbol id="calendar" viewBox="0 0 512 512">
+            <g>
+            <path d="m446 40h-46v-24c0-8.836-7.163-16-16-16s-16 7.164-16 16v24h-224v-24c0-8.836-7.163-16-16-16s-16 7.164-16 16v24h-46c-36.393 0-66 29.607-66 66v340c0 36.393 29.607 66 66 66h380c36.393 0 66-29.607 66-66v-340c0-36.393-29.607-66-66-66zm34 406c0 18.778-15.222 34-34 34h-380c-18.778 0-34-15.222-34-34v-265c0-2.761 2.239-5 5-5h438c2.761 0 5 2.239 5 5z"/>
+            </g>
+        </symbol>
+        
+        <symbol id="avatar" viewBox="0 0 512 512">
+            <g>
+    	<g>
+    		<path d="M421.184,384.96l-81.728-20.437l-6.955-27.819c21.867-21.653,36.843-51.392,41.28-81.899
+    			c12.117-3.413,21.504-13.803,23.125-26.837l5.333-42.667c1.131-9.003-1.643-18.112-7.616-24.939
+    			c-3.499-4.011-7.915-7.04-12.8-8.896l1.963-40.171l7.979-8c12.011-12.779,21.973-34.688,1.152-66.475
+    			C376.917,12.395,349.739,0,312.107,0c-14.848,0-49.024,0-80.853,21.376C140.373,23.275,128,65.493,128,106.667
+    			c0,9.579,2.325,31.147,3.861,44.16c-5.483,1.728-10.453,4.928-14.336,9.344c-6.08,6.891-8.896,16.043-7.765,25.152l5.333,42.667
+    			c1.749,13.909,12.309,24.853,25.664,27.456c4.416,29.333,18.624,58.112,39.232,79.403l-7.424,29.717l-81.728,20.437
+    			C37.333,398.336,0,446.165,0,501.333C0,507.221,4.779,512,10.667,512h490.667c5.888,0,10.667-4.821,10.667-10.709
+    			C512,446.165,474.667,398.336,421.184,384.96z"/>
+    	</g>
+    </g>
+        </symbol>
+        
+        <symbol id="bookmark" viewBox="0 0 512 512">
+            <g>
+    	<g>
+    		<path d="M416.667,0H95.334c-8.284,0-15,6.716-15,15v482c0,6.067,3.655,11.536,9.26,13.858c1.856,0.769,3.805,1.142,5.737,1.142
+    			c3.903,0,7.74-1.523,10.609-4.394l150.063-150.062L406.06,507.606c4.29,4.291,10.741,5.573,16.347,3.252
+    			c5.605-2.322,9.26-7.791,9.26-13.858V15C431.667,6.716,424.952,0,416.667,0z"/>
+    	</g>
+    </g>
+        </symbol>
+        
+        <symbol id="comment" viewBox="-21 -47 682.66669 682">
+            <g>
+                <path d="m552.011719-1.332031h-464.023438c-48.515625 0-87.988281 39.472656-87.988281 87.988281v283.972656c0 48.421875 39.300781 87.824219 87.675781 87.988282v128.871093l185.183594-128.859375h279.152344c48.515625 0 87.988281-39.472656 87.988281-88v-283.972656c0-48.515625-39.472656-87.988281-87.988281-87.988281zm-83.308594 330.011719h-297.40625v-37.5h297.40625zm0-80h-297.40625v-37.5h297.40625zm0-80h-297.40625v-37.5h297.40625zm0 0"/>
+            </g>
+        </symbol>
+        
+        <symbol id="search" viewBox="-1 0 136 136.21852">
+            <g>
+                <path d="M 93.148438 80.832031 C 109.5 57.742188 104.03125 25.769531 80.941406 9.421875 C 57.851562 -6.925781 25.878906 -1.460938 9.53125 21.632812 C -6.816406 44.722656 -1.351562 76.691406 21.742188 93.039062 C 38.222656 104.707031 60.011719 105.605469 77.394531 95.339844 L 115.164062 132.882812 C 119.242188 137.175781 126.027344 137.347656 130.320312 133.269531 C 134.613281 129.195312 134.785156 122.410156 130.710938 118.117188 C 130.582031 117.980469 130.457031 117.855469 130.320312 117.726562 Z M 51.308594 84.332031 C 33.0625 84.335938 18.269531 69.554688 18.257812 51.308594 C 18.253906 33.0625 33.035156 18.269531 51.285156 18.261719 C 69.507812 18.253906 84.292969 33.011719 84.328125 51.234375 C 84.359375 69.484375 69.585938 84.300781 51.332031 84.332031 C 51.324219 84.332031 51.320312 84.332031 51.308594 84.332031 Z M 51.308594 84.332031 "/>
+            </g>
+        </symbol>
+        <symbol id="prev" viewBox="0 0 512 512">
+            <g>
+                <path d="M256 504C119 504 8 393 8 256S119 8 256 8s248 111 248 248-111 248-248 248zM142.1 273l135.5 135.5c9.4 9.4 24.6 9.4 33.9 0l17-17c9.4-9.4 9.4-24.6 0-33.9L226.9 256l101.6-101.6c9.4-9.4 9.4-24.6 0-33.9l-17-17c-9.4-9.4-24.6-9.4-33.9 0L142.1 239c-9.4 9.4-9.4 24.6 0 34z"></path>
+            </g>
+        </symbol>
+        <symbol id="next" viewBox="0 0 512 512">
+            <g>
+                <path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm113.9 231L234.4 103.5c-9.4-9.4-24.6-9.4-33.9 0l-17 17c-9.4 9.4-9.4 24.6 0 33.9L285.1 256 183.5 357.6c-9.4 9.4-9.4 24.6 0 33.9l17 17c9.4 9.4 24.6 9.4 33.9 0L369.9 273c9.4-9.4 9.4-24.6 0-34z"></path>
+            </g>
+        </symbol>
+    </svg>    
+    <header class="header">
+        <div class="container">
+            <div class="header__content">
+                <div class="header__info">
+                    <div class="header__logo header__logo--black">Deliver</div>
+                    <div class="social">
+                        <a class="social__item social__item-header" href="#">
+                            <svg class="social__icon social__icon-header">
+                                <use xlink:href="#facebook"></use>
+                            </svg>
+                        </a>
+                        <a class="social__item social__item-header" href="#">
+                            <svg class="social__icon social__icon-header">
+                                <use xlink:href="#twitter"></use>
+                            </svg>
+                        </a>
+                        <a class="social__item social__item-header" href="#">
+                            <svg class="social__icon social__icon-header">
+                                <use xlink:href="#twitter"></use>
+                            </svg>
+                        </a>
+                    </div>
+                </div> 
+                <div class="header__menu">
+                    <div class="header__inner">
+                        <div class="header__nav" id="header__nav">
+                            <a href="index.html" class="header__link header__link--black">home</a>
+                            <a href="portfolio.html" class="header__link header__link--black">portfolio</a>
+                            <a href="about_us.html" class="header__link header__link--black">about</a>
+                            <a href="services.html" class="header__link header__link--black">services</a>
+                            <a href="archive.html" class="header__link header__link--black">archive</a>
+                            <a href="blog.html" class="header__link header__link--black header__link--active">blog</a>
+    <!--                        <a href="#" class="header__link header__link--black">other pages</a>-->
+                            <a href="contact.html" class="header__link header__link--black">contact us</a>
+                        </div>
+                        <button type="button" class="burger">
+                            <span>Navigation</span>
+                        </button>
+                        <div class="header__search">
+                            <svg class="search__icon search__icon--NotHome">
+                                <use xlink:href="#search"></use>
+                            </svg>
+                        </div>
+                    </div>
+                </div> <!-- header menu-->
+            </div> <!-- header content -->
+        </div> <!-- container -->
+    </header> <!-- header -->
+    
+    <div class="page">
+        <div class="container">
+            <div class="page__info">our blog</div>
+        </div>
+    </div> <!-- PAGE -->
+    
+    
+    <div class="container container__blog">
+        <div class="post__pre">
+            <article class="post post--blog">
+                <div class="post__slider">
+                    <div class="post__header">
+                        <img src="/assets/images/blog/blog_photo_1.jpg" alt="" class="post__photo">
+                    </div>
+                    <div class="post__header">
+                        <img src="/assets/images/blog/blog_photo_3.jpg" alt="" class="post__photo">
+                    </div>
+                    <div class="post__header">
+                        <img src="/assets/images/blog/blog_photo_1.jpg" alt="" class="post__photo">
+                    </div>
+                </div>
+                <div class="post__content">
+    
+                    <h2 class="post__title">7 Strategies to Market Your Business Online
+                    </h2>
+    
+                    <div class="post__detail">
+                        <ul>
+                            <li class="post__item">
+                                <a href="#">
+                                    <svg class="post__icon">
+                                        <use xlink:href="#calendar"></use>
+                                    </svg>
+                                    <time class="post__info" datetime="2013-07-03">july 3, 2013</time>
+                                </a>
+                            </li>
+                            <li class="post__item">
+                                <a href="#">
+                                    <svg class="post__icon">
+                                        <use xlink:href="#avatar"></use>
+                                    </svg>
+                                    <div class="post__info">Michael Reimer</div>
+                                </a>
+                            </li>
+                            <li class="post__item">
+                                <a href="#">
+                                    <svg class="post__icon post__icon--rotate">
+                                        <use xlink:href="#bookmark"></use>
+                                    </svg>
+                                    <div class="post__info">Website Releases</div>
+                                </a>
+                            </li>
+                            <li class="post__item">
+                                <a href="#">
+                                    <svg class="post__icon">
+                                        <use xlink:href="#comment"></use>
+                                    </svg>
+                                    <div class="post__info">2 Comments</div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="post__text">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer egestas erat sit amet nisi mattis, sed bibendum quam ultricies. Suspendisse eget auctor quam. Aliquam sapien ante, condimentum quis ipsum quis, scelerisque porta nisl. Nulla facilisi. Maecenas non rutrum felis. Aenean sed felis sit amet nisi feugiat laoreet. Duis sit amet lectus vitae massa laoreet hendrerit. Maecenas tempor aliquet viverra. Fusce quis consequat eros, fermentum malesuada urna.</p><br>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer egestas erat sit amet nisi mattis, sed bibendum quam ultricies. Suspendisse eget auctor quam. Aliquam sapien ante, condimentum quis ipsum quis, scelerisque porta nisl. Nulla facilisi. Maecenas non rutrum felis.</p>
+                    </div>
+                </div> <!-- post content -->
+            </article> <!-- inside blog -->
+            
+            <div class="social__stat">
+                <ul>
+                    <li class="social__stat--item social__stat--twitter">
+                        <a href="#" class="social__stat--link">
+                            <svg class="social__stat--icon">
+                                <use xlink:href="#twitter"></use>
+                            </svg>
+                            <div class="social__stat--text">Tweet</div>
+                        </a>
+                    </li>
+                    <li>
+                        <div class="social__stat--num">128</div>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="social__stat--item social__stat--facebook">
+                        <a href="#" class="social__stat--link">
+                            <svg class="social__stat--icon">
+                                <use xlink:href="#facebook"></use>
+                            </svg>
+                            <div class="social__stat--text">Like</div>
+                        </a>
+                    </li>
+                    <li>
+                        <div class="social__stat--num">259</div>
+                    </li>
+                </ul>
+                            <ul>
+                    <li class="social__stat--item social__stat--facebook">
+                        <a href="#" class="social__stat--link">
+                            <svg class="social__stat--icon">
+                                <use xlink:href="#facebook"></use>
+                            </svg>
+                            <div class="social__stat--text">Like</div>
+                        </a>
+                    </li>
+                    <li>
+                        <div class="social__stat--num">32</div>
+                    </li>
+                </ul>
+            </div> <!-- social statistic blog item -->
+            
+            <div class="comment__block">
+                <h2 class="comment__title">comments</h2>
+    
+    
+                <ul class="comment">
+                    <li class="comment__item">
+                        <div class="comment__sub">
+                            <img src="/assets/images/comments/comment_2.jpg" alt="" class="comment__avatar">
+                            <div class="comment__content">
+                                <div class="comment__header">
+                                    <div class="comment__name">Matt Adams</div>
+                                    <div>
+                                        <time class="comment__time">July 11, 2013<span>/</span></time>
+                                        <button class="comment__btn" type="submit">Reply</button>
+                                    </div>
+                                </div>
+                                <div class="comment__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dap ibus diam.</div>
+                            </div>
+                        </div> <!-- fist comment -->
+                        <ul class="comment">
+                            <li class="comment__item">
+                                <div class="comment__sub">
+                                    <img src="/assets/images/comments/comment_1.jpg" alt="" class="comment__avatar">
+                                    <div class="comment__content">
+                                        <div class="comment__header">
+                                            <div class="comment__name">Steve Smith</div>
+                                            <div>
+                                                <time class="comment__time">July 11, 2013<span>/</span></time>
+                                                <button class="comment__btn" type="submit">Reply</button>
+                                            </div>
+                                        </div>
+                                        <div class="comment__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dap ibus diam.</div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul> <!-- second comment (reply on first) -->
+                    </li> <!-- comment item -->
+                </ul> <!-- first comment section with replies-->
+    
+                <ul class="comment">
+                    <li class="comment__item">
+                        <div class="comment__sub">
+                            <img src="/assets/images/comments/comment_1.jpg" alt="" class="comment__avatar">
+                            <div class="comment__content">
+                                <div class="comment__header">
+                                    <div class="comment__name">Matt Adams</div>
+                                    <div>
+                                        <time class="comment__time">July 11, 2013<span>/</span></time>
+                                        <button class="comment__btn" type="submit">Reply</button>
+                                    </div>
+                                </div>
+                                <div class="comment__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dap ibus diam.</div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+    
+            </div>
+            
+            <div class="leaveComment">
+              <h2 class="comment__title">leave a comment</h2>
+               
+                <form class="form__contact" action="/" id="form-comment">
+                    <div class="form__content">
+                       
+                        <div class="form__item form__item--comments">
+                            <input type="text" id="name" class="form__item--input _req" autocomplete="off" >
+                            
+                            <div class="form__item--flex">
+                                <label for="name" class="form__item--title form__item--title--notContact">Name <span>*</span></label>
+                                <label for="" class="form__item--subtitle form__item--subtitle--notContact">Your full name please.</label>
+                            </div>
+                        </div>
+                        
+                        <div class="form__item form__item--comments">
+                            <input type="email" id="email" class="form__item--input _req _email" autocomplete="off">
+                            
+                            <div class="form__item--flex">
+                                <label for="email" class="form__item--title form__item--title--notContact">Email Address <span>*</span></label>
+                                <label for="" class="form__item--subtitle form__item--subtitle--notContact">Used for gravatar.</label>
+                            </div>
+                        </div>
+                        
+                        <div class="form__item form__item--comments">
+                            <input type="text" id="website" class="form__item--input" autocomplete="off">
+                            
+                            <div class="form__item--flex">
+                                <label for="website" class="form__item--title form__item--title--notContact">Website</label>
+                                <label for="" class="form__item--subtitle form__item--subtitle--notContact">Link back if you want.</label>
+                            </div>
+                        </div>
+                        
+                        <div class="form__item form__item--comments">
+                            <textarea class="form__item--comment _req" name="message" id="message__textarea"></textarea>
+                        </div>
+                        <div class="btn__helps btn__helps--contact">
+                            <button  type="submit" class="intro__button">send message</button>
+                        </div>
+                        
+                    </div>
+                </form> <!--form comment -->
+                
+            </div>
+           
+        </div> <!-- whole blog item -->
+          
+    
+        
+         
+           
+        <aside class="sidebar__post">
+            <div class="sidebar__post-item">
+                <h2 class="sidebar__post-title">Popular Posts</h2>
+                <ul class="sidebar__post-list">
+                    <li class="sidebar__post-list-item ">
+                        <a href="#" class="sidebar__post-link sidebar__post-link--after">
+                            New Premium WordPress Theme - Blaco 
+                        </a>
+                    </li>
+                    <li class="sidebar__post-list-item ">
+                        <a href="#" class="sidebar__post-link sidebar__post-link--after">
+                            Top Web Trends of 2013  
+                        </a>
+                    </li>
+                    <li class="sidebar__post-list-item ">
+                        <a href="#" class="sidebar__post-link sidebar__post-link--after">
+                            Video Post Example 
+                        </a>
+                    </li>
+                    <li class="sidebar__post-list-item ">
+                        <a href="#" class="sidebar__post-link sidebar__post-link--after">
+                            How Important is Twitter
+                        </a>
+                    </li>
+                    <li class="sidebar__post-list-item ">
+                        <a href="#" class="sidebar__post-link">
+                            Home Builders New Planning Solution
+                        </a>
+                    </li>
+                </ul>
+            </div> <!-- POPULAR  -->
+            
+            <div class="sidebar__post-item">
+                <h2 class="sidebar__post-title">Blog categories</h2>
+                <ul class="sidebar__post-list">
+                    <li class="sidebar__post-list-item ">
+                        <a href="#" class="sidebar__post-link ">
+                            News (4) 
+                        </a>
+                    </li>
+                    <li class="sidebar__post-list-item ">
+                        <a href="#" class="sidebar__post-link">
+                            Website Releases (23)   
+                        </a>
+                    </li>
+                    <li class="sidebar__post-list-item ">
+                        <a href="#" class="sidebar__post-link">
+                            Events (7) 
+                        </a>
+                    </li>
+                    <li class="sidebar__post-list-item ">
+                        <a href="#" class="sidebar__post-link">
+                            Marketing (5)
+                        </a>
+                    </li>
+                    <li class="sidebar__post-list-item ">
+                        <a href="#" class="sidebar__post-link">
+                            Web Development (2)
+                        </a>
+                    </li>
+                </ul>
+            </div> <!-- CATEGORIES -->
+            
+            <div class="sidebar__post-item">
+                <h2 class="sidebar__post-title">Archives</h2>
+                <ul class="sidebar__post-list">
+                    <li class="sidebar__post-list-item ">
+                        <a href="#" class="sidebar__post-link ">
+                            March (4)
+                        </a>
+                    </li>
+                    <li class="sidebar__post-list-item ">
+                        <a href="#" class="sidebar__post-link">
+                            April (5)     
+                        </a>
+                    </li>
+                    <li class="sidebar__post-list-item ">
+                        <a href="#" class="sidebar__post-link">
+                             May (3) 
+                        </a>
+                    </li>
+                    <li class="sidebar__post-list-item ">
+                        <a href="#" class="sidebar__post-link">
+                             June (4)
+                        </a>
+                    </li>
+                    <li class="sidebar__post-list-item ">
+                        <a href="#" class="sidebar__post-link">
+                             July (2)
+                        </a>
+                    </li>
+                </ul>
+            </div> <!-- ARCHIVES -->
+        </aside>
+        
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <footer class="footer">
+        <div class="container">
+    
+            <div class="footer__content">
+    
+                <div class="footer__above">
+    
+                    <div class="footer__item footer__item--first">
+                        <div class="footer__inner">
+                            <h2 class="footer__logo">Deliver</h2>
+                            <div class="social">
+                                <a class="social__item social__item-footer" href="#">
+                                    <svg class="social__icon social__icon-footer">
+                                        <use xlink:href="#facebook"></use>
+                                    </svg>
+                                </a>
+                                <a class="social__item social__item-footer" href="#">
+                                    <svg class="social__icon social__icon-footer">
+                                        <use xlink:href="#twitter"></use>
+                                    </svg>
+                                </a>
+                                <a class="social__item social__item-footer" href="#">
+                                    <svg class="social__icon social__icon-footer">
+                                        <use xlink:href="#twitter"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="footer__text">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum gravida quam quis nunc rutrum placerat. Proin eu mi vitae neque veh interdum id nec turpis nam auctor faucibus sollicitudin.
+                            </p>
+                        </div>
+                    </div> <!-- foter item first -->
+    
+                    <div class="footer__item footer__item--second">
+                        <h2 class="footer__title">contact info</h2>
+                        <ul>
+                            <li class="footer__info">222 Ave C South </li>
+                            <li class="footer__info">Saskatoon, Saskatchewan</li>
+                            <li class="footer__info">Canada S7K 2N5</li>
+                            <li class="footer__info footer__info--margin"><a href="mailto: info@deliver.ca">info@deliver.ca</a></li>
+                            <li class="footer__info footer__info--margin "><a href="tel:1.306.222.3456">1.306.222.3456</a></li>
+                        </ul>
+                    </div> <!-- footer item second -->
+    
+                    <div class="footer__item footer__item--third">
+                        <h2 class="footer__title">quick links</h2>
+                        <ul>
+                            <li class="footer__link">
+                                <div class="footer__arrow footer__arrow--right"></div>
+                                <div class="footer__quick">
+                                    <a href="portfolio.html">Portfolio</a>
+                                </div>
+                            </li>
+                            <li class="footer__link">
+                                <div class="footer__arrow footer__arrow--right"></div>
+                                <div class="footer__quick">
+                                    <a href="about_us.html">About</a>
+                                </div>
+                            </li>
+                            <li class="footer__link">
+                                <div class="footer__arrow footer__arrow--right"></div>
+                                <div class="footer__quick">
+                                    <a href="archive.html">Archive</a>
+                                </div>
+                            </li>
+                            <li class="footer__link">
+                                <div class="footer__arrow footer__arrow--right"></div>
+                                <div class="footer__quick">
+                                    <a href="blog.html">Blog</a>
+                                </div>
+                            </li>
+                            <li class="footer__link">
+                                <div class="footer__arrow footer__arrow--right"></div>
+                                <div class="footer__quick">
+                                    <a href="#">Dropdown</a>
+                                </div>
+                            </li>
+                            <li class="footer__link">
+                                <div class="footer__arrow footer__arrow--right"></div>
+                                <div class="footer__quick">
+                                    <a href="contact.html">Contact Us</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div> <!-- footer item third -->
+    
+                    <div class="footer__item footer__item--fourth">
+                       
+                        <h2 class="footer__title">newsletter</h2>
+                        <div class="footer__text footer__text--letter">
+                            <p>
+                                Lorem ipsum dolor sit amet dolor consectetur adipiscing elit.
+                            </p>
+                        </div>
+    
+                        <form class="subscribe" action="#">
+                            <input class="subscribe__input" placeholder="Email" type="email" autocomplete="off">
+                            <button class="subscribe__btn">ok</button>
+                        </form>
+    
+                    </div> <!-- footer item fourth -->
+                    
+                </div>
+                
+                <div class="footer__under">
+                    <div class="footer__inside">
+                        <div class="footer__copyright">
+                            Copyright 2013 <b>Deliver</b>. All Rights Reserved.
+                        </div>
+                        <ul class="footer__additional">
+                            <li><a class="footer__addons" href="#">about</a></li>
+                            <li><a class="footer__addons" href="#">privacy policy</a></li>
+                            <li><a class="footer__addons" href="#">contact</a></li>
+                        </ul>
+                        
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </footer>
+
+    
+<!-----
+layout: default
+title: Search
+---
+
+<div class="search__modal">
+    <form action="#" class="search__form">
+        <input type="text" class="search__input" placeholder="Type your query here">
+        <button class="search__btn">search</button>
+    </form>
+</div>
+-->
+
+    
+    
+    <!-- JS -->
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="/assets/js/slider.js"></script>
+    <script src="/assets/js/form_validateContact.js"></script>
+    <script src="/assets/js/form_validate-comment.js"></script>
+    <script src="/assets/js/burger.js"></script>
+    <script src="assets/js/app.js"></script>
+    
+</body>
+</html>

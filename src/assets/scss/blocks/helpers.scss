@@ -1,0 +1,42 @@
+.btn__helps {
+    
+    &--contact {
+        text-align: left;
+    }
+    &--home {
+        margin-top: 3rem;
+    }
+}
+.help__line {
+    width: 97%;
+    height: .2rem;
+    background-color: #8b8b8b;
+    margin: 2rem auto;
+}
+
+.hide {
+    display: none;
+}
+
+/* general option */
+.slick-list {
+    overflow: hidden;
+}
+.slick-track {
+    display: flex;
+}
+
+.active {
+    color: green;
+}
+
+@include breakMax ($mode-1200) {
+    .center {
+        justify-content: center;
+    }
+}
+
+body.lock {
+    overflow: hidden;
+}
+

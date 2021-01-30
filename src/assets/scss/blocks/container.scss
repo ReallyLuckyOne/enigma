@@ -1,0 +1,44 @@
+.container {
+
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+
+    
+    &--home {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 10;
+        width: 94%;
+    }
+}
+
+.container__blog {
+    display: flex;
+    justify-content: space-between;
+    
+    @include breakMax ($mode-800) {
+        display: block;
+    }
+}
+
+.container__archive {
+    display: flex;
+    justify-content: space-between;
+    
+    @include breakMax ($mode-850) {
+        display: block;
+    }
+}
+
+.container__contact {
+    display: flex;
+    justify-content: space-between;
+    
+    @include breakMax ($mode-850) {
+        display: block;
+        
+    }
+}

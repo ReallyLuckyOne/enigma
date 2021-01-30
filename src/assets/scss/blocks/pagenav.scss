@@ -1,0 +1,58 @@
+.page_nav {
+    display: flex;
+    margin: 5.5rem 0;
+    
+    @include breakMax ($mode-700) {
+        margin: 3rem 0;
+    }
+    @include breakMax ($mode-575) {
+        margin: 2rem 0;
+    }
+}
+
+.page__nav-item {
+    margin-right: .2rem;
+}
+
+.page__nav-link {
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-weight: 600;
+    background-color: $white;
+    
+    display: block;
+    height: 4rem;
+    width: 4rem;
+    text-align: center;
+    color: #666262;
+    line-height: 4rem;
+    
+    transition: background-color .2s linear;
+    
+    &:hover {
+        background-color: darken($white, 10%);
+    }
+    
+    &.active {
+        background-color: #87b672;
+        color: $white;
+    }
+    
+    @include breakMax ($mode-575) {
+        font-size: 1.6rem;
+        height: 3.5rem;
+        width: 3.5rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+

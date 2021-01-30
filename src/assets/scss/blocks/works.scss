@@ -1,0 +1,194 @@
+.works {
+    background-color: #efefef;
+}
+
+.work__content {
+    display: flex;
+//    justify-content: space-around;
+    flex-wrap: wrap;
+   
+    @include breakMax ($mode-1200) {
+        justify-content: space-around;
+    }
+}
+.work__portfolio {
+    margin-left: -.8rem;
+    margin-right: -.8rem;
+}
+.work__item {
+    
+    width: 29.5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 1.5rem;
+    margin-bottom: 3rem;
+    
+    @include breakMax ($mode-1200) {
+        width: 45%;
+    }
+    @include breakMax ($mode-850) {
+        width: 95%;
+    }
+    
+    &--rectangle {
+        height: 18rem;
+        max-width: 29rem;
+        width: 81.6901408%;
+        background: #464c52;
+        
+        border-top-left-radius: 1rem;
+        border-top-right-radius: 1rem;
+        
+        position: relative;
+        
+        @include breakMax ($mode-410) {       
+            height: 0;
+            padding-bottom: 51%;
+        }
+
+        &--dot {
+            width: .6rem;
+            height: .6rem;
+            background: #fff;
+            border-radius: 50%;
+            
+            position: absolute;
+            top: .5rem;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        &--blockPhoto {
+            max-width: 26rem;
+//            height: 14.9rem;
+            position: absolute;
+            right: 1.5rem;
+            left: 1.5rem;
+            bottom: 1.5rem;
+            
+        }
+        &--hover {
+            position: relative; 
+        }
+        
+        &--blur {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 200;
+            background: rgba(255,255,255,0);
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            transition: background .2s linear;
+            
+            &:hover {
+                background: rgba(255,255,255,.75);
+                
+                .work__item--button {
+                    opacity: 1;
+                    visibility: visible;
+
+                }
+            } 
+        }
+    }
+    &--photo {
+        display: block;
+        max-width: 100%;
+        height: auto;
+
+    }
+    
+    &--underRectangle {
+        max-width: 35.5rem;
+        width: 100%;
+        height: 2rem;
+        background: #e0dcdc;
+        
+        border-bottom-left-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+        position: relative;
+        
+        &--On {
+            width: 14%;
+            height: .7rem;
+            
+            border-bottom-left-radius: .8rem;
+            border-bottom-right-radius: .8rem;
+            
+            background: #757a7a;
+            
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+    &--text {
+        font-size: 1.8rem;
+        font-weight: 600;
+        
+        color: #666262;
+        text-transform: uppercase;
+        
+        margin-top: 1.5rem;
+        line-height: 1.1em;
+    }
+    
+    
+    &--button {
+        width: 5rem;
+        height: 5rem;
+        background-color: #464c52;
+               
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity .2s linear;
+    }
+    &--btn {
+        display: block;
+        width: 100%;
+        height: 100%;
+                
+        position: relative;
+   
+        &:before,
+        &:after {
+            display: block;
+            content: "";
+            width: 2.2rem;
+            height: .6rem;
+            background-color: #c0c0c0;
+            
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate3d(-50%,-50%,0);    
+        }
+        &:before {
+            width: 2.2rem;
+            height: .6rem;
+        }
+        &:after {
+            width: .6rem;
+            height: 2.2rem;
+        }
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+

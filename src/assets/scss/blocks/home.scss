@@ -1,0 +1,186 @@
+.home__content {
+    
+    text-align: center;
+    padding: 24rem 0 11rem;
+    height: auto;
+    
+    &--first {
+        background-image: url(/assets/images/slider__1.jpg);
+    }
+    &--second {
+        background-image: url(/assets/images/slider__2.jpg);
+    }
+    &--first,
+    &--second {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    
+    &--title {
+        font-size: 3.6rem;
+        font-weight: 700;
+        
+        text-transform: uppercase;
+        color: $white;
+        line-height: 1.1em;
+        margin-bottom: 1.5rem;
+        
+        b {
+            color: #87b672;
+        }
+        
+        @include breakMax ($mode-575) {
+            font-size: 2.5rem;
+        }
+    }
+    &--subtitle p {
+        font-size: 2.2rem;
+        font-weight: 400;
+        
+        color: $white;
+        line-height: 1.1em;
+
+        @include breakMax ($mode-575){
+            font-size: 2rem;
+        }
+    }
+    &--btn {
+        padding: 1.2rem 1.8rem;
+        border: .2rem solid $white;
+        
+        font-size: 1.4rem;
+        font-weight: 600;
+        
+        color: $white;
+        background-color: transparent;
+        
+        text-transform: uppercase;
+        text-decoration: none;
+        cursor: pointer;
+        
+        transition: background-color .2s linear;
+        
+        &:hover {
+            background-color: $white;
+            color: $black;
+        }
+    }
+    
+    @include breakMax ($mode-991) {
+        padding: 15rem 0 8rem;
+    }
+}
+
+.home__service {
+    text-align: center;
+    
+    &--content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        
+        margin-bottom: 3rem;
+        
+        @include breakMax ($mode-700){
+            margin-bottom: 1.5rem;
+        }
+
+    }
+    
+    &--item {
+        width: 31%;
+        margin-bottom: 2rem;
+        padding-left: 2rem;
+        
+        &:first-child {
+            padding-left: 0;
+        }
+                
+        @include breakMax ($mode-700) {
+            width: 100%;
+            padding-left: 0;
+        }
+    }
+    
+    &--title {
+        font-size: 1.8rem;
+        font-weight: 600;
+        
+        margin: 1.5rem 0;
+        line-height: 1.1em;
+        
+        color: #666262;
+        text-transform: uppercase;
+    }
+    &--text {
+        font-size: 1.6rem;
+        font-weight: 400;
+        
+        line-height: 1.5em;
+        color: #9b9999;
+        
+        margin-bottom: 1.5rem;
+    }
+    &--btn {
+        font-size: 1.6rem;
+        font-weight: 400;
+        
+        cursor: pointer;
+        text-decoration: none;
+        border: 0;
+        
+        color: #87b672;
+        transition: color .2s linear;
+        
+        &:hover {
+            color: darken(#87b672, 15%);
+            text-decoration: underline;
+        }
+        
+    }
+}
+
+.home__btn {
+    
+    position: absolute;
+    top: 50%;
+    transform: translate3d(0, -50%, 0);
+    z-index: 1000000;
+
+    font-size: 0;
+    padding: 0;
+
+    background-color: transparent;
+    border: none;
+    width: 5.5rem;
+    height: 5.5rem;
+    cursor: pointer;
+    
+    fill: #615e55;
+    &--prev {
+        left: 0rem;
+        transition: fill .2s linear;
+        &:hover {
+            fill: #fefefe;
+        }
+    }
+    &--next {
+        right: 0rem;
+        transition: fill .2s linear;
+        &:hover {
+            fill: #fefefe;
+        }
+    }
+    
+    @include breakMax ($mode-1200) {
+        display: none;
+    }
+}
+
+
+
+
+
+
+

@@ -1,0 +1,152 @@
+.post__pre {
+    width: 62.5%;
+    margin-bottom: 4.5rem;
+    
+    @include breakMax ($mode-800) {
+        width: 100%;
+    }
+    @include breakMax ($mode-575) {
+        margin-bottom: 3rem;
+    }
+}
+.post {
+    margin-top: 5.8rem;
+    
+    &:after {
+        display: block;
+        content: "";
+        width: 100%;
+        height: 1px;
+        background-color: #cccccc;
+        margin: 5rem 0 0 0;
+    }
+    &--blog {
+        &:after {
+          margin: 2rem 0 0 0;  
+        }
+    }
+    
+    @include breakMax ($mode-700) {
+        margin-top: 3rem;
+        
+        &:after {
+            margin-top: 3rem;
+        }
+    }
+}
+
+.post__header {
+    
+    &--audio audio {
+        width: 100%;
+    }
+}
+
+.post__photo {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.post__content {
+    margin-top: 2.8rem;
+    
+    a {
+        text-decoration: none;
+        
+        &:hover .post__title {
+            text-decoration: underline;
+            color: $post-title;
+        }
+    }
+    @include breakMax ($mode-575) {
+        margin-top: 2rem;
+    }
+}
+.post__title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    
+    line-height: 1em;
+    text-transform: uppercase;
+    color: $post-title;
+    margin-bottom: 2rem;
+    
+    @include breakMax ($mode-575) {
+        font-size: 1.6rem;
+        margin-bottom: 1.5rem;
+    }
+}
+
+.post__text {
+    font-size: 1.6rem;
+    font-weight: 400;
+    
+    line-height: 1.5em;
+    color: $post-text;
+    
+    @include breakMax ($mode-575) {
+        font-size: 1.4rem;
+    }
+}
+
+.post__detail ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+
+.post__item {
+    
+    background-color: #efefef;
+    padding: 1rem 1.5rem;
+    margin: 0 1rem .5rem 0;
+    transition: background-color .2s linear;
+    
+    &:hover {
+        background-color: darken(#efefef,10%);
+    }
+    
+    a {
+        display: flex;
+        align-items: center;
+        
+        & .post__icon {
+            display: block;
+            height: 1.7rem;
+            width: 1.7rem;
+            fill: #666262;
+            
+            &--rotate {
+                transform: rotate(45deg);
+            }
+        }
+    }
+    
+    @include breakMax ($mode-575) {
+        padding: .5rem 1rem;
+        
+        a .post__icon {
+            height: 1.3rem;
+            width: 1.3rem;
+        }
+    }
+    
+}
+
+.post__info {
+    font-size: 1.4rem;
+    font-weight: 600;
+    
+    text-transform: uppercase;
+    line-height: 1.7em;
+    color: #9b9999;
+    margin-left: 1rem;
+    
+    @include breakMax ($mode-575) {
+        font-size: 1.1rem;
+    }
+}
+
+
+
