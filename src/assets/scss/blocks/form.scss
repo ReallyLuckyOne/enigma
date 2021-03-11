@@ -1,137 +1,132 @@
-
 .form__item {
     display: flex;
     margin-bottom: 2.5rem;
-    
+
     &--comments {
         flex-direction: row;
         align-items: flex-end;
-        
+
         @include breakMax ($mode-575) {
             flex-direction: column;
             align-items: flex-start;
             margin-bottom: 2rem;
         }
     }
-    
+
     &--contact {
-        flex-direction: column; 
+        flex-direction: column;
     }
-    
+
     &--flex {
         display: flex;
         flex-direction: column;
         margin-left: 1.5rem;
-        
+
         @include breakMax ($mode-575) {
             margin-left: 0;
             margin-bottom: 1rem;
         }
     }
-    
+
     &--title {
         font-size: 1.4rem;
         font-weight: 600;
-        
+
         line-height: 1.6em;
         color: #5f5b5b;
         text-transform: uppercase;
-        
+
         span {
             color: #e74c3c;
         }
+
         &--notContact {
             line-height: 1.45em;
         }
     }
+
     &--subtitle {
         font-size: 1.6rem;
         font-weight: 400;
-        
+
         line-height: 1.6em;
         color: #8f8f8f;
         margin-bottom: .5rem;
-        
+
         &--notContact {
             line-height: 1.1em;
             margin-bottom: 0;
         }
     }
+
     &--input {
         width: 47%;
         min-width: 28rem;
-        
+
         font-size: 1.4rem;
         font-weight: 400;
-        
+
         background-color: #efefef;
         color: #6f6f6f;
-        
+
         border: 0;
         padding: 1.2rem;
-        
+
         transition: box-shadow .2s linear;
-        
+
         &:focus {
             box-shadow: 0 0 1rem #737373;
         }
+
         &._error {
-        box-shadow: 0 0 1rem red;
+            box-shadow: 0 0 1rem red;
         }
-        @include breakMax ($mode-575){
+
+        @include breakMax ($mode-575) {
             order: 2;
         }
 
     }
 
-    
+
     &--message,
     &--comment {
         font-size: 1.8rem;
         font-weight: 400;
         font-family: inherit;
-        
+
         background-color: #efefef;
-        color: #6f6f6f; 
-        
+        color: #6f6f6f;
+
         border: 0;
         padding: 1.2rem;
-        
+
         resize: vertical;
-        
+
         transition: box-shadow .2s linear;
-        
+
         &:focus {
             box-shadow: 0 0 1rem #737373;
         }
-        &._error {
-        box-shadow:  0 0 1rem red;
-        }
     }
+
     &--message {
         width: 87%;
         min-height: 30rem;
         min-width: 28rem;
-        
-        @include breakMax ($mode-850){
+
+        @include breakMax ($mode-850) {
             width: 90%;
         }
     }
+
     &--comment {
         width: 100%;
         min-height: 21rem;
-        
-        @include breakMax ($mode-575){
+
+        @include breakMax ($mode-575) {
             width: 93%;
             min-height: 15rem;
         }
     }
 }
-
-
-
-
-
-
-
-
